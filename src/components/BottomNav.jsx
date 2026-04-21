@@ -5,7 +5,7 @@ export function BottomNav({ currentPage, onNavigate }) {
     { id: 'home', label: 'Início', icon: '🏠' },
     { id: 'prescricoes', label: 'Prescrições', icon: '📋' },
     { id: 'bulas', label: 'Bulas', icon: '💊' },
-    { id: 'favoritos', label: 'Favoritos', icon: '⭐' }
+    { id: 'configuracoes', label: 'Configurações', icon: '⚙️' }
   ]
 
   return (
