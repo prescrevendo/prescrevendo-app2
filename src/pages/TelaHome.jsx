@@ -22,12 +22,6 @@ export function TelaHome({ onNavigate }) {
         </div>
       </div>
 
-      <div className="welcome-section">
-        <div className="welcome-pill">💊</div>
-        <h1 className="welcome-title">Bem-vindo ao Prescrevendo</h1>
-        <p className="welcome-subtitle">Escolha uma opção ou digite para buscar</p>
-      </div>
-
       <div className="menu-grid">
         {menuItems.map(item => (
           <button
