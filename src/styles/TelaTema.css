@@ -49,6 +49,7 @@
   border-radius: 10px;
   overflow: hidden;
   background: #fff;
+  min-height: 52px;
 }
 
 .secao-header {
@@ -250,7 +251,7 @@
   }
 
   .secao-card {
-    min-height: auto;
+    min-height: 52px;
   }
 
   .secao-header {
