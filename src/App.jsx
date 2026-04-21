@@ -31,17 +31,19 @@ export function App() {
     }
   }
 
+  const getHeaderTitle = () => {
+    if (selectedTema) return selectedTema.nome
+    if (selectedEspecialidade) return selectedEspecialidade.nome
+    if (currentPage === 'prescricoes') return 'Prescrições'
+    if (currentPage === 'favoritos') return 'Configurações'
+    return 'Prescrevendo'
+  }
+
   return (
     <div className="app-container">
       <Header 
-        titulo={
-          selectedTema ? selectedTema.nome :
-          selectedEspecialidade ? selectedEspecialidade.nome :
-          currentPage === 'prescricoes' ? 'Prescrições' :
-          currentPage === 'favoritos' ? 'Favoritos' :
-          'Prescrevendo'
-        }
-        onBack={currentPage !== 'home' && goBack ? goBack : null}
+        titulo={getHeaderTitle()}
+        onBack={currentPage !== 'home' ? goBack : null}
       />
 
       <div className="app-content">
