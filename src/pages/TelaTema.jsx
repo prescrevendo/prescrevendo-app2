@@ -1,13 +1,6 @@
 import { useState } from 'react'
 import '../styles/TelaTema.css'
 
-const BADGE_COLORS = {
-  procedimento: { bg: '#EBF3FB', color: '#185fa5', label: 'PROCEDIMENTO' },
-  conduta: { bg: '#EAF4EC', color: '#3b6d11', label: 'CONDUTA' },
-  alerta: { bg: '#FDECEA', color: '#a32d2d', label: 'ALERTA' },
-  info: { bg: '#E8F4EF', color: '#0f6e56', label: 'ORIENTAÇÃO' }
-}
-
 export function TelaTema({ tema }) {
   const [activeTab, setActiveTab] = useState('orientacoes')
   const [expandedSections, setExpandedSections] = useState({})
@@ -48,7 +41,6 @@ export function TelaTema({ tema }) {
             {tema.orientacoes.map((secao, idx) => {
               const sectionId = `${tema.id}-${idx}`
               const isExpanded = expandedSections[sectionId]
-              const badgeInfo = BADGE_COLORS[secao.tipo] || BADGE_COLORS.info
 
               return (
                 <div key={sectionId} className="secao-card">
@@ -57,15 +49,6 @@ export function TelaTema({ tema }) {
                     onClick={() => toggleSection(sectionId)}
                   >
                     <div className="secao-title">
-                      <span
-                        className="badge"
-                        style={{
-                          background: badgeInfo.bg,
-                          color: badgeInfo.color
-                        }}
-                      >
-                        {badgeInfo.label}
-                      </span>
                       <span className="titulo">{secao.titulo}</span>
                     </div>
                     <span className="toggle-icon">
