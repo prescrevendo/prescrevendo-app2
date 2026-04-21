@@ -49,18 +49,20 @@
   border-radius: 10px;
   overflow: hidden;
   background: #fff;
+  min-height: 52px;
 }
 
 .secao-header {
   width: 100%;
   background: none;
   border: none;
-  padding: 12px 14px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.2s;
+  min-height: 52px;
 }
 
 .secao-header:hover {
@@ -80,36 +82,6 @@
   text-align: left;
 }
 
-.badge {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 700;
-  margin-right: 8px;
-  text-transform: uppercase;
-}
-
-.badge-procedimento {
-  background: #EBF3FB;
-  color: #185fa5;
-}
-
-.badge-conduta {
-  background: #EAF4EC;
-  color: #3b6d11;
-}
-
-.badge-alerta {
-  background: #FDECEA;
-  color: #a32d2d;
-}
-
-.badge-info {
-  background: #E8F4EF;
-  color: #0f6e56;
-}
-
 .toggle-icon {
   color: #ccc;
   font-size: 12px;
@@ -117,7 +89,7 @@
 }
 
 .secao-body {
-  padding: 12px 14px 12px 14px;
+  padding: 0 14px 10px 14px;
   animation: slideDown 0.2s ease-out;
 }
 
@@ -250,19 +222,16 @@
   }
 
   .secao-card {
-    min-height: auto;
+    min-height: 52px;
   }
 
   .secao-header {
-    padding: 10px 12px;
+    min-height: 52px;
+    padding: 8px 12px;
   }
 
   .titulo {
     font-size: 12px;
-  }
-
-  .secao-body {
-    padding: 10px 12px 10px 12px;
   }
 
   .prescricao-item {
