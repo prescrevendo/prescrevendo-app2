@@ -1,0 +1,167 @@
+.tela-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-container {
+  width: 100%;
+  padding: 16px 0;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1.5px solid #dde3ea;
+  border-radius: 14px;
+  background: #fff;
+  gap: 8px;
+}
+
+.search-icon {
+  font-size: 16px;
+  color: #bbb;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  background: transparent;
+  color: #1a1a1a;
+}
+
+.search-input::placeholder {
+  color: #bbb;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.welcome-pill {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1.5px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.welcome-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.welcome-subtitle {
+  font-size: 15px;
+  color: #888;
+  margin: 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.menu-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  text-align: center;
+}
+
+.menu-card:not(.coming-soon):hover {
+  border-color: #0d5c4a;
+  box-shadow: 0 4px 12px rgba(13, 92, 74, 0.1);
+  transform: translateY(-2px);
+}
+
+.menu-card.coming-soon {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.card-label {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.coming-soon-badge {
+  font-size: 12px;
+  color: #888;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .welcome-title {
+    font-size: 20px;
+  }
+
+  .card-label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tela-home {
+    padding: 12px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .menu-card {
+    padding: 16px 12px;
+    gap: 8px;
+  }
+
+  .card-icon {
+    font-size: 28px;
+  }
+
+  .card-label {
+    font-size: 13px;
+  }
+}

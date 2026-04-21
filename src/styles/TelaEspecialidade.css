@@ -1,0 +1,68 @@
+.tela-especialidade {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.temas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tema-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tema-card:hover {
+  border-color: #0d5c4a;
+  box-shadow: 0 4px 12px rgba(13, 92, 74, 0.1);
+}
+
+.tema-name {
+  flex: 1;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.tema-arrow {
+  color: #bbb;
+  font-size: 20px;
+  margin-left: 16px;
+}
+
+@media (max-width: 480px) {
+  .tela-especialidade {
+    padding: 16px;
+  }
+
+  .tema-card {
+    padding: 14px;
+  }
+
+  .tema-name {
+    font-size: 14px;
+  }
+}

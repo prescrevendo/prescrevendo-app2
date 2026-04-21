@@ -1,0 +1,86 @@
+.tela-prescricoes {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.especialidades-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.especialidade-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.especialidade-card:hover {
+  border-color: #0d5c4a;
+  box-shadow: 0 4px 12px rgba(13, 92, 74, 0.1);
+}
+
+.esp-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.esp-name {
+  flex: 1;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.esp-arrow {
+  color: #bbb;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .tela-prescricoes {
+    padding: 16px;
+  }
+
+  .especialidade-card {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .esp-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .esp-name {
+    font-size: 14px;
+  }
+}
