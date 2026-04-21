@@ -1,9 +1,11 @@
 import { ENDOCRINOLOGIA_TEMAS } from '../modules/endocrinologia/dados'
+import { GASTROENTEROLOGIA_TEMAS } from '../modules/gastroenterologia/dados'
 import '../styles/TelaEspecialidade.css'
 
 // Mapa de temas por especialidade
 const TEMAS_ESPECIALIDADES = {
-  endocrinologia: ENDOCRINOLOGIA_TEMAS
+  endocrinologia: ENDOCRINOLOGIA_TEMAS,
+  gastroenterologia: GASTROENTEROLOGIA_TEMAS
 }
 
 export function TelaEspecialidade({ especialidade, onNavigate }) {
