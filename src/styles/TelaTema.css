@@ -49,6 +49,7 @@
   border-radius: 10px;
   overflow: hidden;
   background: #fff;
+  min-height: 52px;
 }
 
 .secao-header {
@@ -61,6 +62,7 @@
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.2s;
+  min-height: 52px;
 }
 
 .secao-header:hover {
@@ -117,7 +119,7 @@
 }
 
 .secao-body {
-  padding: 12px 14px 12px 14px;
+  padding: 0 14px 12px;
   animation: slideDown 0.2s ease-out;
 }
 
@@ -250,19 +252,16 @@
   }
 
   .secao-card {
-    min-height: auto;
+    min-height: 52px;
   }
 
   .secao-header {
+    min-height: 52px;
     padding: 10px 12px;
   }
 
   .titulo {
     font-size: 12px;
-  }
-
-  .secao-body {
-    padding: 10px 12px 10px 12px;
   }
 
   .prescricao-item {
