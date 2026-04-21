@@ -53,7 +53,7 @@ export function TelaPrescrições({ onNavigate }) {
     { 
       id: 'pneumologia', 
       nome: 'Pneumologia', 
-      icon: '🫁',
+      icon: '🦠',
       bg: '#e8f4ef'
     },
     { 
