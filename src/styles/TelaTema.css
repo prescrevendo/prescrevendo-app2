@@ -194,6 +194,16 @@
   font-size: 13px;
   line-height: 1.4;
   color: #1a1a1a;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.prescricao-item:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.prescricao-item:nth-child(even) {
+  background: transparent;
 }
 
 .prescricao-item:last-child {
@@ -267,6 +277,7 @@
 
   .prescricao-item {
     font-size: 12px;
+    padding: 6px;
   }
 
   .numero {
