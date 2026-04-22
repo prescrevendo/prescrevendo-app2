@@ -1,5 +1,5 @@
-import { ENDOCRINOLOGIA_TEMAS } from '../modules/endocrinologia/dados'
-import { GASTROENTEROLOGIA_TEMAS } from '../modules/gastroenterologia/dados'
+import { ENDOCRINOLOGIA_TEMAS } from '../modules/endocrinologia/index.js'
+import { GASTROENTEROLOGIA_TEMAS } from '../modules/gastroenterologia/index.js'
 import '../styles/TelaEspecialidade.css'
 
 // Mapa de temas por especialidade
