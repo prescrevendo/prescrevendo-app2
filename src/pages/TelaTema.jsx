@@ -32,6 +32,14 @@ export function TelaTema({ tema }) {
         >
           💊 Prescrição
         </button>
+        {tema.referencias && tema.referencias.length > 0 && (
+          <button
+            className={`tab-btn ${activeTab === 'referencias' ? 'active' : ''}`}
+            onClick={() => setActiveTab('referencias')}
+          >
+            📚 Referências
+          </button>
+        )}
       </div>
 
       {/* CONTEÚDO */}
@@ -95,6 +103,24 @@ export function TelaTema({ tema }) {
                     <span><strong>Obs:</strong> {grupo.nota}</span>
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {activeTab === 'referencias' && tema.referencias && (
+          <div className="referencias-container">
+            {tema.referencias.map((ref, idx) => (
+              <div key={idx} className="referencia-card">
+                <div className="ref-numero">[{ref.numero}]</div>
+                <div className="ref-content">
+                  <div className="ref-titulo">{ref.titulo}</div>
+                  <div className="ref-autores">{ref.autores}</div>
+                  <div className="ref-detalhes">
+                    <span className="ref-publicacao">{ref.publicacao}</span>
+                    <span className="ref-ano">{ref.ano}</span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
