@@ -276,3 +276,61 @@
     font-size: 10px;
   }
 }
+
+/* ========== REFERÊNCIAS ========== */
+.referencias-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+}
+
+.referencia-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f9f9f9;
+  border-left: 4px solid #0d5c4a;
+  border-radius: 4px;
+}
+
+.ref-numero {
+  font-weight: 700;
+  color: #0d5c4a;
+  font-size: 14px;
+  min-width: 40px;
+}
+
+.ref-content {
+  flex: 1;
+}
+
+.ref-titulo {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.ref-autores {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.ref-detalhes {
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  gap: 8px;
+}
+
+.ref-publicacao {
+  font-style: italic;
+}
+
+.ref-ano {
+  font-weight: 600;
+}
