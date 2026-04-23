@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 import './ChatClaude.css'
 
 export function ChatClaude() {
@@ -63,7 +64,13 @@ export function ChatClaude() {
             <span className="icone">
               {msg.role === 'user' ? '👨‍⚕️' : msg.role === 'error' ? '❌' : '🤖'}
             </span>
-            <div className="texto">{msg.content}</div>
+            <div className="texto">
+              {msg.role === 'assistant' ? (
+                <ReactMarkdown>{msg.content}</ReactMarkdown>
+              ) : (
+                msg.content
+              )}
+            </div>
           </div>
         ))}
 
