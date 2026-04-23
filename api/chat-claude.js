@@ -1,9 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 
 export default async function handler(req, res) {
-  // Debug
   console.log("API Route chamada!");
-  console.log("API_KEY existe?", !!process.env.ANTHROPIC_API_KEY);
 
   if (req.method !== 'POST') {
     return res.status(405).json({ erro: 'Método não permitido' });
@@ -27,7 +25,7 @@ export default async function handler(req, res) {
 ⚠️ Aviso: Esta é uma ferramenta educacional, não substitui médico.`;
 
     const response = await client.messages.create({
-      model: "claude-3-5-sonnet-20241022",
+      model: "claude-sonnet-4-6",
       max_tokens: 1024,
       system: SISTEMA_MEDICO,
       messages: [
