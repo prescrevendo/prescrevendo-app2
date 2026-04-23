@@ -4,6 +4,7 @@ export function TelaHome({ onNavigate }) {
   const menuItems = [
     { id: 'prescricoes', label: 'Prescrições', icon: '📋' },
     { id: 'bulas', label: 'Bulas', icon: '💊' },
+    { id: 'chat', label: 'Chat IA', icon: '💬' },
     { id: 'calculadoras', label: 'Calculadoras', icon: '🧮', comingSoon: true },
     { id: 'escores', label: 'Escores / Escalas', icon: '📊', comingSoon: true },
     { id: 'pediatria', label: 'Pediatria', icon: '👶', comingSoon: true },

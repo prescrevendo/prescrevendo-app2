@@ -4,7 +4,7 @@ export function BottomNav({ currentPage, onNavigate }) {
   const navItems = [
     { id: 'home', label: 'Início', icon: '🏠' },
     { id: 'prescricoes', label: 'Prescrições', icon: '📋' },
-    { id: 'bulas', label: 'Bulas', icon: '💊' },
+    { id: 'chat', label: 'Chat IA', icon: '💬' },
     { id: 'configuracoes', label: 'Configurações', icon: '⚙️' }
   ]
 

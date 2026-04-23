@@ -4,6 +4,7 @@ import { TelaPrescrições } from './pages/TelaPrescrições'
 import { TelaEspecialidade } from './pages/TelaEspecialidade'
 import { TelaTema } from './pages/TelaTema'
 import { TelaFavoritos } from './pages/TelaFavoritos'
+import { ChatClaude } from './components/ChatClaude'
 import { Header } from './components/Header'
 import { BottomNav } from './components/BottomNav'
 import './styles/App.css'
@@ -32,6 +33,7 @@ export function App() {
   }
 
   const getHeaderTitle = () => {
+    if (currentPage === 'chat') return 'Assistente Médico'
     if (selectedTema) return selectedTema.nome
     if (selectedEspecialidade) return selectedEspecialidade.nome
     if (currentPage === 'prescricoes') return 'Prescrições'
@@ -43,12 +45,15 @@ export function App() {
     <div className="app-container">
       <Header 
         titulo={getHeaderTitle()}
-        onBack={currentPage !== 'home' ? goBack : null}
+        onBack={currentPage !== 'home' && currentPage !== 'chat' ? goBack : null}
       />
 
       <div className="app-content">
         {currentPage === 'home' && (
           <TelaHome onNavigate={navigate} />
+        )}
+        {currentPage === 'chat' && (
+          <ChatClaude />
         )}
         {currentPage === 'prescricoes' && !selectedEspecialidade && (
           <TelaPrescrições onNavigate={navigate} />
